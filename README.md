@@ -12,8 +12,17 @@
 > |---|---|---|
 > | [#281](https://github.com/gnolang/tm2-js-client/pull/281) | Adds `packages: []` to `pnpm-workspace.yaml` | Without it pnpm 9 cannot install this repo as a git dependency at all — `ERROR packages field missing or empty` |
 >
-> **No changes of our own**, and no behaviour difference from upstream: the
-> only commit is a build-config fix. gnomputer pins this fork rather than the
+> Plus **one commit that is not an upstream PR**: this branch commits `dist/`
+> and replaces `prepare` with a no-op, so the package installs from git
+> without building. pnpm builds a git dependency by running its `prepare`
+> script, and a build at install time is a risk with no upside for a
+> consumption branch — the sibling fork needs this because upstream's build
+> fails on ubuntu runners
+> ([gnolang/gno-js-client#254](https://github.com/gnolang/gno-js-client/issues/254)),
+> and both are kept consistent.
+>
+> So: one upstream PR verbatim, plus one packaging commit. No behaviour
+> difference from upstream. gnomputer pins this fork rather than the
 > published package so that exactly one copy of `tm2-js-client` is resolved
 > across the dependency graph — [`moul/gno-js-client`](https://github.com/moul/gno-js-client)
 > depends on it too, and two copies would break `instanceof` checks against
