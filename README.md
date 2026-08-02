@@ -1,3 +1,31 @@
+> ### ⚠ This is a fork, and it is ahead of upstream
+>
+> **`moul/tm2-js-client`, branch `gnomputer`.** It exists so
+> [gnomputer](https://github.com/moul/gnomputer) can use a fix that is
+> submitted upstream but not yet merged. It is not a maintained alternative
+> to [`gnolang/tm2-js-client`](https://github.com/gnolang/tm2-js-client) —
+> if you are not gnomputer, use that one.
+>
+> This branch is `gnolang/tm2-js-client@main` plus exactly one open PR:
+>
+> | upstream PR | what it does | why gnomputer needs it |
+> |---|---|---|
+> | [#281](https://github.com/gnolang/tm2-js-client/pull/281) | Adds `packages: []` to `pnpm-workspace.yaml` | Without it pnpm 9 cannot install this repo as a git dependency at all — `ERROR packages field missing or empty` |
+>
+> **No changes of our own**, and no behaviour difference from upstream: the
+> only commit is a build-config fix. gnomputer pins this fork rather than the
+> published package so that exactly one copy of `tm2-js-client` is resolved
+> across the dependency graph — [`moul/gno-js-client`](https://github.com/moul/gno-js-client)
+> depends on it too, and two copies would break `instanceof` checks against
+> error classes that cross that boundary.
+>
+> Deleted once #281 merges and a release ships.
+>
+> Also open upstream and not applied here, because it has no PR yet:
+> [gnolang/tm2-js-client#279](https://github.com/gnolang/tm2-js-client/issues/279)
+> — account lookups throw a plain `Error("account is not initialized")` while
+> every other failure has a typed class.
+
 <h2 align="center">⚛️ Tendermint2 JS/TS Client ⚛️</h2>
 
 ## Overview
