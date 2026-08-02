@@ -1,0 +1,40 @@
+//#region src/provider/errors/messages.ts
+const InternalErrorMessage = "internal error encountered";
+const TxDecodeErrorMessage = "unable to decode tx";
+const InvalidSequenceErrorMessage = "invalid sequence";
+const UnauthorizedErrorMessage = "signature is unauthorized";
+const InsufficientFundsErrorMessage = "insufficient funds";
+const UnknownRequestErrorMessage = "unknown request";
+const InvalidAddressErrorMessage = "invalid address";
+const UnknownAddressErrorMessage = "unknown address";
+const InvalidPubKeyErrorMessage = "invalid pubkey";
+const InsufficientCoinsErrorMessage = "insufficient coins";
+const InvalidCoinsErrorMessage = "invalid coins";
+const InvalidGasWantedErrorMessage = "invalid gas wanted";
+const OutOfGasErrorMessage = "out of gas";
+const MemoTooLargeErrorMessage = "memo too large";
+const InsufficientFeeErrorMessage = "insufficient fee";
+const TooManySignaturesErrorMessage = "too many signatures";
+const NoSignaturesErrorMessage = "no signatures";
+const GasOverflowErrorMessage = "gas overflow";
+//#endregion
+exports.GasOverflowErrorMessage = GasOverflowErrorMessage;
+exports.InsufficientCoinsErrorMessage = InsufficientCoinsErrorMessage;
+exports.InsufficientFeeErrorMessage = InsufficientFeeErrorMessage;
+exports.InsufficientFundsErrorMessage = InsufficientFundsErrorMessage;
+exports.InternalErrorMessage = InternalErrorMessage;
+exports.InvalidAddressErrorMessage = InvalidAddressErrorMessage;
+exports.InvalidCoinsErrorMessage = InvalidCoinsErrorMessage;
+exports.InvalidGasWantedErrorMessage = InvalidGasWantedErrorMessage;
+exports.InvalidPubKeyErrorMessage = InvalidPubKeyErrorMessage;
+exports.InvalidSequenceErrorMessage = InvalidSequenceErrorMessage;
+exports.MemoTooLargeErrorMessage = MemoTooLargeErrorMessage;
+exports.NoSignaturesErrorMessage = NoSignaturesErrorMessage;
+exports.OutOfGasErrorMessage = OutOfGasErrorMessage;
+exports.TooManySignaturesErrorMessage = TooManySignaturesErrorMessage;
+exports.TxDecodeErrorMessage = TxDecodeErrorMessage;
+exports.UnauthorizedErrorMessage = UnauthorizedErrorMessage;
+exports.UnknownAddressErrorMessage = UnknownAddressErrorMessage;
+exports.UnknownRequestErrorMessage = UnknownRequestErrorMessage;
+
+//# sourceMappingURL=messages.cjs.map

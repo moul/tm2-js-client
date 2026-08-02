@@ -1,0 +1,1 @@
+import { compactBitArrayFromAmino, compactBitArrayToAmino } from "./compact-bit-array.cjs";
