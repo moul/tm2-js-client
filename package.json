@@ -67,7 +67,11 @@
     "test:watch": "vitest --watch",
     "test:coverage": "vitest --coverage",
     "prepare": "pnpm build",
-    "prepublishOnly": "pnpm lint"
+    "prepublishOnly": "pnpm lint",
+    "changeset": "changeset",
+    "changeset:status": "changeset status",
+    "version:packages": "changeset version",
+    "release": "pnpm build && changeset publish"
   },
   "packageManager": "pnpm@11.21.0",
   "main": "dist/index.cjs",
